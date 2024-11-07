@@ -1,0 +1,150 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte padrão */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Estilos do header */
+header {
+    background-color: rgba(218, 107, 125, 0.925);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+header nav ul li a:hover {
+    color: #f39c12; /* Cor de destaque para o link */
+    text-decoration: underline;
+}
+
+header nav ul li a:active {
+    color: #e67e22; /* Cor quando o link é clicado */
+}
+
+/* Estilo do banner */
+.banner {
+    background-image: url(Bolo\ de\ Capa.png);
+    background-size: cover;
+    background-position: center;
+    color: #790147;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+.banner p {
+    font-size: 1.5rem;
+}
+
+/* Seção de Bolos */
+.bolos {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.bolos h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1e011fb9;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.bolo {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bolo img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.bolo .info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bolo .info p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Query para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    /* Esconde todos os itens do menu, exceto "Contato" */
+    header nav ul {
+        display: block; /* Torna o menu em lista vertical */
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul li:not(:last-child) {
+        display: none; /* Oculta todos os itens, exceto o último (Contato) */
+    }
+
+    /* Ajuste o tamanho do logo */
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+}
